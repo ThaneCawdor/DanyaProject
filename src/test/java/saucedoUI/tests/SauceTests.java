@@ -65,5 +65,5 @@ public class SauceTests extends BaseTests {
         Assert.assertEquals(before, after);
     }
 
-//    comment for commit
+//    что то для коммита
 }
