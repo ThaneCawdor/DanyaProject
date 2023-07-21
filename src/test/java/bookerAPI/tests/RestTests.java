@@ -111,7 +111,7 @@ public class RestTests extends BaseTests {
         Response response = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-                .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
+                .header("Authorization", "YWRtaW46cGFzc3dvcmQxMjM=")
                 //.cookie("token", "abc123")
                 .auth().preemptive().basic("admin", "password123")
                 .body(expectedBooking)
@@ -135,11 +135,11 @@ public class RestTests extends BaseTests {
         BookingData actualBooking = given()
                 .contentType(ContentType.JSON)
                 .accept(ContentType.JSON)
-                .header("Authorization", "Basic YWRtaW46cGFzc3dvcmQxMjM=")
+                .header("Authorization", "YWRtaW46cGFzc3dvcmQxMjM=")
                 //.cookie("token", "abc123")
                 .body(map)
                 .when()
-                .patch("/booking/3")
+                .patch("/booking/4")
                 .then().log().all()
                 .extract().response().as(BookingData.class);
 
