@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class RestTests extends BaseTests {
 
-    private final static String URL = "https://restful-booker.herokuapp.com";
+    private final  String URL = "https://restful-booker.herokuapp.com";
     Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     @Test
