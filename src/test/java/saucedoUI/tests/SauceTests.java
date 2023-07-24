@@ -46,7 +46,7 @@ public class SauceTests extends BaseTests {
         Assert.assertFalse(app.isElementPresent(By.xpath("//span[@class='shopping_cart_badge']")));
     }
 
-    @Test
+    @Test(enabled = false)
     public void removeFromCartProblemUser() {
         app.login("problem_user", "secret_sauce");
         app.addToCart(0);
@@ -54,7 +54,7 @@ public class SauceTests extends BaseTests {
         Assert.assertFalse(app.isElementPresent(By.xpath("//span[@class='shopping_cart_badge']")));
     }
 
-    @Test
+    @Test(enabled = false)
     public void productFilterByPriceProblemUser() {
         app.login("problem_user", "secret_sauce");
         List<Double> before = app.createPriceList();

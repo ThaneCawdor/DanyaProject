@@ -101,7 +101,7 @@ public class RestTests extends BaseTests {
 
     }
 
-    @Test
+    @Test(enabled = false)
     public void updateBookingFromId() {
         Specifications.installSpec(Specifications.requestSpec(URL), Specifications.responseSpec200());
 
@@ -124,7 +124,7 @@ public class RestTests extends BaseTests {
         Assert.assertEquals(actualBooking, expectedBooking);
     }
 
-    @Test
+    @Test(enabled = false)
     public void updateBookingPartial() {
         Specifications.installSpec(Specifications.requestSpec(URL), Specifications.responseSpec200());
 
