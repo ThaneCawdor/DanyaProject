@@ -1,11 +1,15 @@
 package saucedoUI.manager;
 
+import io.qameta.allure.Allure;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.lang.reflect.Method;
+
 
 public class BaseTests {
 
@@ -20,6 +24,7 @@ public class BaseTests {
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {
+        Allure.getLifecycle().addAttachment("screenshot","image/png","png",((TakesScreenshot) app.wd).getScreenshotAs(OutputType.BYTES));
         app.stop();
     }
 
