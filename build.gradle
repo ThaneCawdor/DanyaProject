@@ -22,6 +22,11 @@ dependencies {
     testImplementation 'org.aspectj:aspectjweaver:1.9.5'
 
 }
+task testAPI(type: Test) {
+    useTestNG() {
+        suites 'src/test/resources/testng.xml'
+    }
+}
 
 test {
     useTestNG()
