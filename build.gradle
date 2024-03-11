@@ -11,7 +11,7 @@ dependencies {
     testImplementation 'org.testng:testng:7.1.0'
     testImplementation 'org.seleniumhq.selenium:selenium-java:4.8.3'
     testImplementation 'com.google.code.gson:gson:2.10.1'
-    testImplementation 'io.rest-assured:rest-assured:4.2.0'
+    testImplementation 'io.rest-assured:rest-assured:5.3.0'
     testImplementation 'ch.qos.logback:logback-classic:1.4.7'
 
     testImplementation 'io.qameta.allure:allure-testng:2.13.1'
